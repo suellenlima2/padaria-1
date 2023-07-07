@@ -35,6 +35,7 @@ func (registerProductCases) testWhenItHasAHappyPath(t *testing.T) {
 	assert.Nil(t, actualErr)
 }
 
+
 func (registerProductCases) testWhenItReceivesAnError(t *testing.T) {
 	controller := gomock.NewController(t)
 	productRepository := repoMock.NewMockProductLoader(controller)

@@ -11,7 +11,7 @@ type Product struct {
 }
 
 func (p Product) ID() int {
-	return p.id
+  return p.id
 }
 
 func (p Product) Name() string {
@@ -26,7 +26,7 @@ func (p Product) Price() float32 {
 	return p.price
 }
 
-func (p Product) ExpirationDate() time.Time {
+func (p Product) ExpirationDate() time.Time{
 	return p.expirationDate
 }
 

@@ -54,8 +54,8 @@ func (repo ProductRepository) SelectProducts() ([]domain.Product, error) {
 							id 							as product_id,
 							name 						as product_name,
 							code 						as product_code,
-							price 					as product_price,
-							expiration_date as product_expiration_date
+							price 				     	as product_price,
+							expiration_date             as product_expiration_date
 						from product;`
 
 	var productDTOList []dto.Product
@@ -82,11 +82,11 @@ func (repo ProductRepository) UpdateProduct(product domain.Product) error {
 	defer repo.closeConnection(conn)
 
 	query := `update product set 
-							name 						= $1, 
-							code 						= $2,
-							price 					= $3,
-							expiration_date = $4
-						where id = $5;`
+							 name 						= $1, 
+							 code 						= $2,
+							 price 					    = $3,
+							 expiration_date            = $4
+						 where id = $5;`
 
 	_, err = conn.Exec(
 		query,
